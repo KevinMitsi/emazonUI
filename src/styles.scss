@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize';
+body{
+    background-color: #eaffa8;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vb;
+}

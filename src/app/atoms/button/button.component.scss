@@ -1,0 +1,10 @@
+.button{
+    background-color: #8e6134;
+    cursor: pointer;
+    color: 8e6134;
+    border: none;
+    border-radius: 2.5rem;
+    &:hover{
+        background-color: darken($color: #8e6134, $amount: 5%);
+    }
+}

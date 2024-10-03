@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonComponent } from './button.component';
+import { ButtonComponent } from '../../../src/app/components/atoms/button/button.component';
 
 describe('ButtonComponent', () => {
   let component: ButtonComponent;
@@ -17,7 +17,7 @@ describe('ButtonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
   });
 });

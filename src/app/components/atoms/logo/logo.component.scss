@@ -1,0 +1,12 @@
+@import "../../../../styles/_variables.scss";
+h1{
+    color: $purple;
+    font-size: 6rem;
+    font-weight: 700;
+    margin: none;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+        color: lighten($color: $purple, $amount: 10rem);
+    } 
+}

@@ -1,0 +1,10 @@
+@import "../../../../styles/variables";
+.nav-item{
+    background-color: $purple;
+    border: none;
+    color: $bg-light-grey;
+    cursor: pointer;
+    &:hover{
+        background-color: lighten($color: $purple, $amount: 10rem);
+    }
+}

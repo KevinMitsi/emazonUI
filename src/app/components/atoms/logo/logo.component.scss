@@ -1,12 +1,15 @@
 @import "../../../../styles/_variables.scss";
-h1{
+.logo{
     color: $purple;
-    font-size: 6rem;
-    font-weight: 700;
-    margin: none;
-    text-align: center;
-    cursor: pointer;
-    &:hover{
-        color: lighten($color: $purple, $amount: 10rem);
-    } 
+    &--small{
+        font-size: 2.4rem;
+    }
+
+    &--mid{
+        font-size: 6.4rem;
+    }
+
+    &--big{
+        font-size: 8rem;
+    }
 }

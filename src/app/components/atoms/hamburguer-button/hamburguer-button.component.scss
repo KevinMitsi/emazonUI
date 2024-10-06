@@ -1,0 +1,11 @@
+@import '../../../../styles/variables';
+
+.hamburger-button{
+    font-size: 3.2rem;
+    cursor: pointer;
+    &:hover{
+        padding: 0.8rem 0.4rem;
+        background-color: lighten($color: $purple, $amount: 2rem);
+        border-radius: $purple 0.3rem;
+    }
+}

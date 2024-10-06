@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-header',
@@ -8,16 +8,15 @@ import { Router } from '@angular/router';
 })
 export class NavHeaderComponent { 
 
-  constructor(private _router:Router) { }
+  constructor(private _router:Router, private route:ActivatedRoute) { }
 
   onCategoriesClick(){
     console.log('Categories clicked');
-    this._router.navigate(['categories']);
+    this._router.navigate(['category'], {relativeTo:this.route});
   }
 
   onBrandsClick(){
     console.log('Brands clicked');
-    this._router.navigate(['brands']);
   }
 
 }

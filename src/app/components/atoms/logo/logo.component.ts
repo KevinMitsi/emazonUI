@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent {
-
+  @Input() logoType:string = "logo logo--big poppins-bold";
   constructor() { }
 
 

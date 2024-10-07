@@ -13,6 +13,9 @@ import { HamburguerButtonComponent } from './components/atoms/hamburguer-button/
 import { TextboxComponent } from './components/atoms/textbox/textbox.component';
 import { HrDividerComponent } from './components/atoms/hr-divider/hr-divider.component';
 import { AdminPanelComponent } from './components/pages/admin-panel/admin-panel.component';
+import { FooterComponent } from './components/organisms/footer/footer.component';
+import { GreenButtonComponent } from './components/atoms/green-button/green-button.component';
+import { AdminPanelH2Component } from './components/atoms/admin-panel-h2/admin-panel-h2.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { AdminPanelComponent } from './components/pages/admin-panel/admin-panel.
     HrDividerComponent,
     CategoryPageComponent,
     NavHeaderComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    FooterComponent,
+    GreenButtonComponent,
+    AdminPanelH2Component,
   ],
   imports: [
     BrowserModule,

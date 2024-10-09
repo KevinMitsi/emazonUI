@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th class="poppins-bold">Nombre</th>
+            <th class="poppins-bold">Descripción</th>
+        </tr>
+    </thead>
+   <tbody>
+    <tr *ngFor="let category of categories">
+        <td class="poppins-regular">{{category.name}}</td>
+        <td class="poppins-regular">{{category.description}}</td>
+    </tr>
+</tbody>
+</table>

@@ -1,0 +1,48 @@
+@import "../../../../styles/_variables.scss";
+
+$form-bg: $bg-light-grey;
+$form-border: $border;
+$form-text-color: $black;
+
+.form-body {
+  background-color: $form-bg;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    color: $purple;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: $hint-text;
+      font-weight: bold;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $form-border;
+      border-radius: 4px;
+      font-size: 16px;
+
+      &:focus {
+        border-color: $purple;
+        box-shadow: 0 0 5px rgba(157, 63, 231, 0.5);
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $hint-text;
+        opacity: 1; // Firefox lowers the opacity of placeholder text
+      }
+    }
+}
+  
+}

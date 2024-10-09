@@ -1,0 +1,14 @@
+<ng-container  *ngIf="hasCategories; else empty">
+    <div class="categories-table-container">
+        <app-category-table [categories]="categories"></app-category-table>
+    </div>
+</ng-container>
+
+<ng-template class="empty-categories" #empty>
+    <div class="empty-categories__icon">
+        <i class="fas fa-box-open"></i>
+    </div>
+    <div class="empty-categories__text poppins-bold">
+        <p>No hay categorías para mostrar</p>
+    </div>
+</ng-template>

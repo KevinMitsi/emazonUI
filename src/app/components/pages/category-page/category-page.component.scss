@@ -1,8 +1,8 @@
 @import '../../../../styles/variables';
-.categories-container{
+.crud-options-container{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 0.2rem;
-    box-sizing: border-box;
+    align-items: center;
+    gap: 3rem;
 }
+

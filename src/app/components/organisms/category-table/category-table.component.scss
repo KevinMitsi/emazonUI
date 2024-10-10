@@ -1,0 +1,31 @@
+@import '../../../../styles/variables.scss';
+table {
+    margin-bottom: 2rem;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1;
+    background-color: $table-body-bg;
+    border: 1px solid $table-border-color;
+    border-radius: $table-border-radius;
+    overflow: hidden;
+    thead {
+        th{
+          padding:  $table-padding;
+          text-align: center;
+          border-bottom: 1px solid $table-border-color;
+          background-color: $table-header-bg;
+          color: $table-header-color;
+          font-size: medium;
+        }
+    }
+    tbody {
+        td {
+          padding: $table-padding;
+          text-align: center;
+          border-bottom: 1px solid $table-border-color;
+          color: $black;
+          font-size: 14px;
+        }
+    }
+    
+}   

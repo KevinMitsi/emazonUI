@@ -1,0 +1,15 @@
+<ng-container *ngIf="hasCategories; else noCategories">
+    <div class="categories-table-container">
+        <app-category-table [categories]="categories"></app-category-table>
+    </div>
+</ng-container>
+
+<ng-template #noCategories>
+    <ng-container *ngIf="!showErrorDiv">
+        <app-empty-box-div message="No hay categorías registradas"></app-empty-box-div>
+    </ng-container>
+</ng-template>
+
+<ng-container class="display-information" *ngIf="showErrorDiv">
+    <app-warning-div warningMessage="Ha ocurrido un error en el servidor al cargar las categorías"></app-warning-div>
+</ng-container>

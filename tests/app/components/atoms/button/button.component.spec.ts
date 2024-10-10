@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ButtonComponent } from '../../../src/app/components/atoms/button/button.component';
+import { jest } from '@jest/globals';
+import { ButtonComponent } from '../../../../../src/app/components/atoms/button/button.component';
 
 describe('ButtonComponent', () => {
   let component: ButtonComponent;
@@ -19,5 +19,11 @@ describe('ButtonComponent', () => {
 
   test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('should emit onClickEvent when clickEvent is called', () => {
+    jest.spyOn(component.onClickEvent, 'emit');
+    component.clickEvent();
+    expect(component.onClickEvent.emit).toHaveBeenCalled();
   });
 });

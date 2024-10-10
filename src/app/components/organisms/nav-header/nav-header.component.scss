@@ -1,0 +1,12 @@
+.nav-header {
+    width: 100%;
+    display: flex;
+    justify-content: center; // Alinea los ítems en el centro
+}
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem; // Espaciado entre ítems
+}

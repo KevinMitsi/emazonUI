@@ -1,10 +1,15 @@
+@import '../../../../styles/variables';
 .button{
-    background-color: #8e6134;
-    cursor: pointer;
-    color: 8e6134;
     border: none;
-    border-radius: 2.5rem;
+    background-color: $purple;
+    font-size: 2.5rem;
+    border-radius: 4rem;
+    color: $bg-light-grey;
+    padding: .5rem 3rem;
+    box-sizing: content-box;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.2);
+    cursor: pointer;
     &:hover{
-        background-color: darken($color: #8e6134, $amount: 5%);
+        background-color: darken($purple, $amount: 10);
     }
 }

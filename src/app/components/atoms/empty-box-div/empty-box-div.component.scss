@@ -1,0 +1,18 @@
+@import '--/../../../../../styles/variables';
+.display-information__icon{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 6rem;
+}
+.display-information__text{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 2rem;
+    color: $black;
+}

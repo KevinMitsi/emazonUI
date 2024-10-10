@@ -1,0 +1,19 @@
+@import "../../../../styles/_variables.scss";
+.logo{
+    color: $purple;
+    &--small{
+        font-size: 2.4rem;
+    }
+
+    &--mid{
+        font-size: 6.4rem;
+    }
+
+    &--big{
+        font-size: 8rem;
+    }
+    &--footer{
+        font-size: 2.4rem;
+        color: $white;
+    }
+}

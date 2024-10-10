@@ -1,0 +1,13 @@
+@import "../../../../styles/variables";
+.nav-item{
+    display: flex;
+    align-items: center;
+    background-color: $purple;
+    border-radius: 0.4rem;
+    padding: 0.8rem 1.2rem;
+    color: $bg-light-grey;
+    cursor: pointer;
+    &:hover{
+        background-color: lighten($color: $purple, $amount: 10rem);
+    }
+}

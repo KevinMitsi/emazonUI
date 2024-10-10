@@ -1,0 +1,89 @@
+<div class="form-container">
+  <app-failed-window
+    *ngIf="showFailedWindow"
+    [message]="errorMessage"
+    [tittle]="errorTitle"
+    buttonText="Cerrar"
+    (closed)="onCloseFailedWindow()"
+  >
+  </app-failed-window>
+
+  <app-success-window
+    *ngIf="succesWindow"
+    [message]="successMessage"
+    [tittle]="successTitle"
+    buttonText="Aceptar"
+    (closed)="onCloseSuccessWindow()"
+  >
+  </app-success-window>
+
+  <form [formGroup]="addCategoryForm" (ngSubmit)="onSubmit()">
+    <div class="form-body">
+      <h3 class="poppins-bold">Crea tu categoría</h3>
+
+      <div class="form-group">
+        <label class="poppins-bold" for="categoryName"
+          >Nombre de la Categoría</label
+        >
+        <input
+          type="text"
+          [ngClass]="{
+            'form-input--invalid':
+              hasError('categoryName', 'required') ||
+              hasError('categoryName', 'pattern'),
+            'form-input': true,
+            'poppins-regular': true
+          }"
+          placeholder="Nombre"
+          formControlName="categoryName"
+        />
+        <ng-container *ngIf="hasError('categoryName', 'required')">
+          <app-text-danger
+            text="El nombre no puede ser vacío"
+          ></app-text-danger>
+        </ng-container>
+        <ng-container *ngIf="hasError('categoryName', 'pattern')">
+          <app-text-danger
+            text="El nombre solo puede contener letras y números"
+          ></app-text-danger>
+        </ng-container>
+      </div>
+
+      <div class="form-group">
+        <label class="poppins-bold" for="description">Descripción</label>
+        <input
+          type="text"
+          [ngClass]="{
+            'form-input--invalid':
+              hasError('description', 'required') ||
+              hasError('description', 'pattern'),
+            'form-input': true,
+            'poppins-regular': true
+          }"
+          placeholder="Descripción"
+          formControlName="description"
+        />
+        <ng-container *ngIf="hasError('description', 'required')">
+          <app-text-danger
+            text="La descripción no puede ser vacía"
+          ></app-text-danger>
+        </ng-container>
+        <ng-container *ngIf="hasError('description', 'pattern')">
+          <app-text-danger
+            text="La descripción solo puede contener letras y números"
+          ></app-text-danger>
+        </ng-container>
+      </div>
+
+      <div class="button-container">
+        <button
+          type="submit"
+          class="submit-button poppins-regular"
+          [disabled]="addCategoryForm.invalid"
+        >
+          Crear
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

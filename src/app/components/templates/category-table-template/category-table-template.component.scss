@@ -1,0 +1,29 @@
+@import '../../../../styles/variables';
+.categories-table-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.display-information__icon{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 6rem;
+    &--danger{
+        color: $attention;
+    }
+}
+
+.display-information__text{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 2rem;
+    color: $black;
+}
+

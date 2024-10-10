@@ -1,0 +1,13 @@
+@import '../../../../styles/variables.scss';
+.container{
+    .container__text-danger{
+        color: $error;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    .danger-icon{
+        color: $error;
+        font-size: 1.6rem;
+        margin-right: 0.5rem;
+    }
+}

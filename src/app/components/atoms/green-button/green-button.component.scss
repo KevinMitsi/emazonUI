@@ -1,0 +1,15 @@
+@import '../../../../styles/variables';
+.button-green{
+    border: none;
+    background-color: $approval;
+    font-size: 2rem;
+    border-radius: 2rem;
+    color: $bg-light-grey;
+    padding: .5rem .5rem;
+    box-sizing: content-box;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.2);
+    cursor: pointer;
+    &:hover{
+        background-color: darken($approval, $amount: 10);
+    }
+}

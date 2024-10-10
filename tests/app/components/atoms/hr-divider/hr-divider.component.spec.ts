@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HrDividerComponent } from './hr-divider.component';
+import { HrDividerComponent } from '../../../../../src/app/components/atoms/hr-divider/hr-divider.component';
 
 describe('HrDividerComponent', () => {
   let component: HrDividerComponent;
@@ -17,7 +17,7 @@ describe('HrDividerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
   });
 });

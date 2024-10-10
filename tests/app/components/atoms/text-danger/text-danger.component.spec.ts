@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextDangerComponent } from './text-danger.component';
+import { TextDangerComponent } from '../../../../../src/app/components/atoms/text-danger/text-danger.component';
 
 describe('TextDangerComponent', () => {
   let component: TextDangerComponent;
@@ -17,7 +17,13 @@ describe('TextDangerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('should bind text input', () => {
+    component.text = 'Error message';
+    fixture.detectChanges();
+    expect(component.text).toBe('Error message');
   });
 });

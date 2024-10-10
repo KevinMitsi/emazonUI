@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FailedWindowComponent } from './failed-window.component';
+import { FailedWindowComponent } from '../../../../../src/app/components/atoms/failed-window/failed-window.component';
 
 describe('FailedWindowComponent', () => {
   let component: FailedWindowComponent;
@@ -17,7 +17,13 @@ describe('FailedWindowComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('should emit closed when closeWindow is called', () => {
+    jest.spyOn(component.closed, 'emit');
+    component.closeWindow();
+    expect(component.closed.emit).toHaveBeenCalled();
   });
 });

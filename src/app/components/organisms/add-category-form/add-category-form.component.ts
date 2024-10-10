@@ -79,7 +79,7 @@ export class AddCategoryFormComponent {
     this.router.navigate(['dashboard/category/all']);
   }
 
-  private createAndEmitCategory(name: string, description: string): void {
+   createAndEmitCategory(name: string, description: string): void {
     const categoryData: Category = {
       name: name,
       description: description,
@@ -98,12 +98,12 @@ export class AddCategoryFormComponent {
     });
   }
 
-  private showSuccessWindow(): void {
+  showSuccessWindow(): void {
     this.addCategoryForm.reset();
     this.succesWindow = true;
   }
   
-  private getErrorMessage(error: any): string {
+   getErrorMessage(error: any): string {
     this.isThereError = true;
     if (error.status === 0) {
       return 'No se pudo conectar con el servidor. Por favor, inténtalo más tarde.';
@@ -118,7 +118,7 @@ export class AddCategoryFormComponent {
   }
 
 
-  private chooseErrorMessage(): void {
+   chooseErrorMessage(): void {
     if (this.addCategoryForm.get('categoryName')?.hasError('required')) {
       this.errorMessage = 'El nombre de la categoría no puede estar vacío.';
     }

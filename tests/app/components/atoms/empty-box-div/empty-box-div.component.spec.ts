@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmptyBoxDivComponent } from './empty-box-div.component';
+import { EmptyBoxDivComponent } from '../../../../../src/app/components/atoms/empty-box-div/empty-box-div.component';
 
 describe('EmptyBoxDivComponent', () => {
   let component: EmptyBoxDivComponent;

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuccessWindowComponent } from './success-window.component';
+import { SuccessWindowComponent } from '../../../../../src/app/components/atoms/success-window/success-window.component';
 
 describe('SuccessWindowComponent', () => {
   let component: SuccessWindowComponent;
@@ -17,7 +17,12 @@ describe('SuccessWindowComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+  test('should emit closed when closeWindow is called', () => {
+    jest.spyOn(component.closed, 'emit');
+    component.closeWindow();
+    expect(component.closed.emit).toHaveBeenCalled();
   });
 });

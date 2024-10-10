@@ -11,8 +11,6 @@ export class SuccessWindowComponent {
   @Input() tittle:string = '';
   @Input() buttonText: string = '';
   @Output() closed = new EventEmitter<void>();
-
-  
   
   closeWindow() {
     this.closed.emit();

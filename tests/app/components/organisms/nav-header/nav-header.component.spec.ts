@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavHeaderComponent } from './nav-header.component';
+import { NavHeaderComponent } from '../../../../../src/app/components/organisms/nav-header/nav-header.component';
 
 describe('NavHeaderComponent', () => {
   let component: NavHeaderComponent;

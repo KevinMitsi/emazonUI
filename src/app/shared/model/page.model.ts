@@ -7,6 +7,5 @@ export interface Page<T>{
     number: number;
     sort: any;
     first: boolean;
-    numberOfElements: number;
     empty: boolean;
 }

@@ -2,19 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { TOKEN } from '../../../constants.class';
+import{TOKEN} from '../../../constants.class';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InterceptorService implements HttpInterceptor {
-  stockBaseUrl: string = 'http://localhost:8082/api/v1/';
-  userBaseUrl: string = 'http://localhost:8083/api/v1/';
-  transactionBaseUrl: string = 'http://localhost:8084/api/v1/';
-  cartBaseUrl: string = 'http://localhost:8085/api/v1/';
+  stockBaseUrl:string = 'http://localhost:8082/api/v1/';
+  userBaseUrl:string = 'http://localhost:8083/api/v1/';
+  transactionBaseUrl:string = 'http://localhost:8084/api/v1/';
+  cartBaseUrl:string = 'http://localhost:8085/api/v1/';
 
-  constructor(private snackBar: MatSnackBar) {} // Inject MatSnackBar
+  constructor() { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const unprotectedEndpoints = [
@@ -26,7 +25,7 @@ export class InterceptorService implements HttpInterceptor {
     let clonedRequest = req;
 
     // Add the Bearer token to the request headers if it's not an unprotected endpoint
-    if (!isUnprotectedEndpoint) {
+    if (!isUnprotectedEndpoint) {;
       clonedRequest = req.clone({
         headers: req.headers.set('Authorization', `Bearer ${TOKEN}`)
       });
@@ -45,13 +44,6 @@ export class InterceptorService implements HttpInterceptor {
         }
 
         console.error(errorMessage);
-        
-        // Display the error message to the user
-        this.snackBar.open(errorMessage, 'Close', {
-          duration: 3000, // Duration in milliseconds
-          panelClass: ['error-snackbar'] // Optional styling class
-        });
-
         return throwError(() => new Error(errorMessage));
       })
     );

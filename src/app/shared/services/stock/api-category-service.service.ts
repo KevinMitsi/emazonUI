@@ -12,9 +12,9 @@ import { Category } from '../../model/category.model';
 })
 export class ApiCategoryService {
 
-  private readonly apiBase:string  = "http://localhost:8082/api/v1/category";
+ readonly apiBase:string  = "http://localhost:8082/api/v1/category";
   constructor(
-    private readonly _http:HttpClient
+     readonly _http:HttpClient
   ) {}
 
   getCategories(): Observable<Page<Category>> {

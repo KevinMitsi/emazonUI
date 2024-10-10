@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoComponent } from '../../../src/app/components/atoms/logo/logo.component';
+import { LogoComponent } from '../../../../../src/app/components/atoms/logo/logo.component';
 
 describe('LogoComponent', () => {
   let component: LogoComponent;
@@ -17,7 +17,13 @@ describe('LogoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('should bind logoType input', () => {
+    component.logoType = 'logo logo--small';
+    fixture.detectChanges();
+    expect(component.logoType).toBe('logo logo--small');
   });
 });

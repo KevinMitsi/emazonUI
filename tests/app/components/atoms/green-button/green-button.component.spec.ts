@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GreenButtonComponent } from './green-button.component';
+import { GreenButtonComponent } from '../../../../../src/app/components/atoms/green-button/green-button.component';
 
 describe('GreenButtonComponent', () => {
   let component: GreenButtonComponent;
@@ -17,7 +17,13 @@ describe('GreenButtonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('should emit clickEvent when onClick is called', () => {
+    jest.spyOn(component.clickEvent, 'emit');
+    component.onClick();
+    expect(component.clickEvent.emit).toHaveBeenCalled();
   });
 });

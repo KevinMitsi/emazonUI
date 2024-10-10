@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./text-danger.component.scss']
 })
 export class TextDangerComponent {
-
   @Input() text:string = "text";
 
   constructor() { }

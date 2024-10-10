@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-logo',
@@ -8,6 +8,4 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LogoComponent {
   @Input() logoType:string = "logo logo--big poppins-bold";
   constructor() { }
-
-
 }

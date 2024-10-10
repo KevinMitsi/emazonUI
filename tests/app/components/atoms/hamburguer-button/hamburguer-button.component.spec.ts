@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HamburguerButtonComponent } from './hamburguer-button.component';
+import { HamburguerButtonComponent } from '../../../../../src/app/components/atoms/hamburguer-button/hamburguer-button.component';
 
 describe('HamburguerButtonComponent', () => {
   let component: HamburguerButtonComponent;

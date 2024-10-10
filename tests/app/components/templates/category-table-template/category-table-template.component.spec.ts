@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CategoryTableTemplateComponent } from './category-table-template.component';
+import { CategoryTableTemplateComponent } from '../../../../../src/app/components/templates/category-table-template/category-table-template.component';
 
 describe('CategoryTableTemplateComponent', () => {
   let component: CategoryTableTemplateComponent;

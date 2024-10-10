@@ -6,6 +6,12 @@ import { GreenButtonComponent } from './green-button/green-button.component';
 import { HamburguerButtonComponent } from './hamburguer-button/hamburguer-button.component';
 import { HrDividerComponent } from './hr-divider/hr-divider.component';
 import { LogoComponent } from './logo/logo.component';
+import { TextDangerComponent } from './text-danger/text-danger.component';
+import { SuccessWindowComponent } from './success-window/success-window.component';
+import { FailedWindowComponent } from './failed-window/failed-window.component';
+import { WarningDivComponent } from './warning-div/warning-div.component';
+import { EmptyBoxDivComponent } from './empty-box-div/empty-box-div.component';
+
 
 
 
@@ -16,18 +22,28 @@ import { LogoComponent } from './logo/logo.component';
     GreenButtonComponent,
     HamburguerButtonComponent,
     HrDividerComponent,
-    LogoComponent
+    LogoComponent,
+    TextDangerComponent,
+    SuccessWindowComponent,
+    FailedWindowComponent,
+    WarningDivComponent,
+    EmptyBoxDivComponent
   ],
   imports: [
     CommonModule
 ],
   exports: [
     AdminPanelH2Component,
+    FailedWindowComponent,
     ButtonComponent,
     GreenButtonComponent,
     HamburguerButtonComponent,
     HrDividerComponent,
-    LogoComponent
+    LogoComponent,
+    TextDangerComponent,
+    SuccessWindowComponent,
+    WarningDivComponent,
+    EmptyBoxDivComponent
   ]
 })
 export class AtomsModule { }

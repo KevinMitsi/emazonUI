@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Category } from 'src/shared/model/category.model';
+import { Category } from 'src/app/shared/model/category.model';
+
 
 @Component({
   selector: 'app-category-table',

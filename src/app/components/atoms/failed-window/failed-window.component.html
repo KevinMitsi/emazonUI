@@ -1,0 +1,8 @@
+<div class="overlay" (click)="closeWindow()" (keyup)="closeWindow()">
+    <div class="window">
+      <h2 class="poppins-regular">{{tittle}}</h2>
+      <i class="fa fa-exclamation-circle icon" aria-hidden="true"></i>
+      <p poppis-regular>{{message}}</p>
+    <button class="poppins-regular  button" (click)="closeWindow()">{{buttonText}}</button>
+    </div>
+</div>

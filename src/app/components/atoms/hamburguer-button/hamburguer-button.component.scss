@@ -5,6 +5,7 @@
     cursor: pointer;
     &:hover{
         padding: 0.8rem 0.4rem;
+        transition: background-color .5s;
         background-color: lighten($color: $purple, $amount: 2rem);
         border-radius: $purple 0.3rem;
     }
